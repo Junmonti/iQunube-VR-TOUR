@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iQunube × BAIC — Virtual Product Tour</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="logo-area">
+    <img src="images/iqunube_logo.png" alt="iQunube">
+    <span>iQunube × BAIC</span>
+  </div>
+  <nav class="nav-links">
+    <a href="#pods">Aero-Cargo Pods</a>
+    <a href="#aerorack">AeroRack</a>
+    <a href="#carriers">Carriers</a>
+    <a href="#cooler">Smart Cooler</a>
+    <a href="#btm">Transit Module</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="badge">Virtual Product Tour</div>
+  <h1>The World's First<br><span class="gold">Vehicle-Matched</span><br>Accessories</h1>
+  <p>Explore the complete iQunube × BAIC product ecosystem. Every product designed to mirror the identity of the vehicle it belongs to. Click, rotate, and discover.</p>
+  <div class="scroll-cue">
+    <span>Scroll to explore</span>
+    <span class="arrow">&#8595;</span>
+  </div>
+</section>
+
+<!-- SECTION 1: AERO-CARGO PODS -->
+<section class="section" id="pods">
+  <div class="section-header">
+    <div class="section-number">Section 01</div>
+    <h2 class="section-title">Aero-Cargo Pod Collection</h2>
+    <p class="section-subtitle">Carbon fibre construction. Teardrop aerodynamics. Vehicle-matched design with integrated LED light signatures and solar charging. Select a model below to explore all three views.</p>
+  </div>
+
+  <!-- Pod selector grid -->
+  <div class="pod-grid" id="podGrid">
+    <div class="pod-card active" data-model="b30" onclick="selectPod('b30')">
+      <img src="images/pod_b30_side.png" alt="BAIC B30 Pod">
+      <div class="name">BAIC <span class="gold">B30</span></div>
+    </div>
+    <div class="pod-card" data-model="b40" onclick="selectPod('b40')">
+      <img src="images/pod_b40_side.png" alt="BAIC B40 Pod">
+      <div class="name">BAIC <span class="gold">B40</span></div>
+    </div>
+    <div class="pod-card" data-model="bj40" onclick="selectPod('bj40')">
+      <img src="images/pod_bj40_side.png" alt="BAIC BJ40 Pod">
+      <div class="name">BAIC <span class="gold">BJ40</span></div>
+    </div>
+    <div class="pod-card" data-model="bj80" onclick="selectPod('bj80')">
+      <img src="images/pod_bj80_side.png" alt="BAIC BJ80 Pod">
+      <div class="name">BAIC <span class="gold">BJ80</span></div>
+    </div>
+    <div class="pod-card" data-model="x55" onclick="selectPod('x55')">
+      <img src="images/pod_x55_side.png" alt="BAIC X55 Pod">
+      <div class="name">BAIC <span class="gold">X55</span></div>
+    </div>
+    <div class="pod-card" data-model="x55plus" onclick="selectPod('x55plus')">
+      <img src="images/pod_x55plus_side.png" alt="BAIC X55 Plus Pod">
+      <div class="name">BAIC <span class="gold">X55 Plus</span></div>
+    </div>
+  </div>
+
+  <!-- 3-View Viewer -->
+  <div class="product-viewer" id="podViewer" style="margin-top: 40px;">
+    <div class="viewer-header">
+      <div class="viewer-model-name" id="podViewerTitle">BAIC <span class="gold">B30</span> Aero-Cargo Pod</div>
+      <div class="view-controls">
+        <button class="view-btn active" onclick="switchView('front')">Front</button>
+        <button class="view-btn" onclick="switchView('side')">Side</button>
+        <button class="view-btn" onclick="switchView('rear')">Rear</button>
+      </div>
+    </div>
+    <div class="viewer-stage" id="viewerStage">
+      <img id="img-front" class="visible" src="images/pod_b30_front.png" alt="Front view">
+      <img id="img-side" class="hidden" src="images/pod_b30_side.png" alt="Side view">
+      <img id="img-rear" class="hidden" src="images/pod_b30_rear.png" alt="Rear view">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: AERORACK -->
+<section class="section" id="aerorack">
+  <div class="section-header">
+    <div class="section-number">Section 02</div>
+    <h2 class="section-title">AeroRack System</h2>
+    <p class="section-subtitle">Carbon fibre modular roof rack with SnapBrace quick-release mounting and PodLink adapter. A unified platform for every adventure.</p>
+  </div>
+
+  <div class="feature-grid">
+    <div class="feature-card" onclick="openLightbox('images/aerorack_base.png')">
+      <img src="images/aerorack_base.png" alt="AeroRack Base">
+      <h4>Carbon Fibre Base Rack</h4>
+      <p>40% lighter than aluminium. Aerodynamic wing profile reduces drag and wind noise.</p>
+    </div>
+    <div class="feature-card" onclick="openLightbox('images/aerorack_podlink.png')">
+      <img src="images/aerorack_podlink.png" alt="PodLink">
+      <h4>PodLink Adapter</h4>
+      <p>Seamless connection between AeroRack and Aero-Cargo Pod. Tool-free installation.</p>
+    </div>
+    <div class="feature-card" onclick="openLightbox('images/aerorack_snapbrace.png')">
+      <img src="images/aerorack_snapbrace.png" alt="SnapBrace">
+      <h4>SnapBrace Mounting</h4>
+      <p>Quick-release clamp system. Secure at any speed. Install or remove in under 60 seconds.</p>
+    </div>
+    <div class="feature-card" onclick="openLightbox('images/aerorack_bike.png')">
+      <img src="images/aerorack_bike.png" alt="VeloGrip">
+      <h4>VeloGrip — Bicycle</h4>
+      <p>Secure fork-mount cradle for road and mountain bikes. Vibration-dampened.</p>
+    </div>
+    <div class="feature-card" onclick="openLightbox('images/aerorack_kayak.png')">
+      <img src="images/aerorack_kayak.png" alt="AquaCradle">
+      <h4>AquaCradle — Kayak</h4>
+      <p>Padded J-style cradle with ratchet straps. Fits kayaks up to 4m.</p>
+    </div>
+    <div class="feature-card" onclick="openLightbox('images/aerorack_surfboard.png')">
+      <img src="images/aerorack_surfboard.png" alt="WaveRider">
+      <h4>WaveRider — Surfboard</h4>
+      <p>Soft-grip horizontal cradle. Protects board finish. Carries up to 3 boards.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: TOWBAR CARRIERS -->
+<section class="section" id="carriers">
+  <div class="section-header">
+    <div class="section-number">Section 03</div>
+    <h2 class="section-title">Towbar-Mounted Carriers</h2>
+    <p class="section-subtitle">Vehicle-inspired rear design with integrated LED tail lights that mirror the vehicle's own light signature. Click any carrier to enlarge.</p>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-item" onclick="openLightbox('images/carrier_bj40.png')">
+      <img src="images/carrier_bj40.png" alt="BJ40 Carrier">
+      <div class="caption">BAIC BJ40 Carrier</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('images/carrier_x55og.png')">
+      <img src="images/carrier_x55og.png" alt="X55 Carrier">
+      <div class="caption">BAIC X55 Carrier</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('images/carrier_x55plus.png')">
+      <img src="images/carrier_x55plus.png" alt="X55 Plus Carrier">
+      <div class="caption">BAIC X55 Plus Carrier</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('images/carrier_x7.png')">
+      <img src="images/carrier_x7.png" alt="X7 Carrier">
+      <div class="caption">BAIC X7 Carrier</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: SMART COOLER -->
+<section class="section" id="cooler">
+  <div class="section-header">
+    <div class="section-number">Section 04</div>
+    <h2 class="section-title">Smart Cooler Box</h2>
+    <p class="section-subtitle">Six vehicle-branded editions with colour-matched trim, embossed model insignia, and Bluetooth temperature control. Click to enlarge.</p>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-item" onclick="openLightbox('images/cooler_baic_hero.png')">
+      <img src="images/cooler_baic_hero.png" alt="Smart Cooler Hero">
+      <div class="caption">iQunube Smart Cooler</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('images/cooler_b30.png')">
+      <img src="images/cooler_b30.png" alt="B30 Cooler">
+      <div class="caption">BAIC B30 Edition</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('images/cooler_bj40.png')">
+      <img src="images/cooler_bj40.png" alt="BJ40 Cooler">
+      <div class="caption">BAIC BJ40 Edition</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('images/cooler_bj80.png')">
+      <img src="images/cooler_bj80.png" alt="BJ80 Cooler">
+      <div class="caption">BAIC BJ80 Edition</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('images/cooler_x55og.png')">
+      <img src="images/cooler_x55og.png" alt="X55 Cooler">
+      <div class="caption">BAIC X55 Edition</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('images/cooler_x55plus.png')">
+      <img src="images/cooler_x55plus.png" alt="X55 Plus Cooler">
+      <div class="caption">BAIC X55 Plus Edition</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('images/cooler_x7.png')">
+      <img src="images/cooler_x7.png" alt="X7 Cooler">
+      <div class="caption">BAIC X7 Edition</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: BEIJING TRANSIT MODULE -->
+<section class="section" id="btm">
+  <div class="section-header">
+    <div class="section-number">Section 05</div>
+    <h2 class="section-title">Beijing Transit Module</h2>
+    <p class="section-subtitle">The world's first all-in-one smart transit module. Solar power bay, biometric security, CCTV alarm, QuickLock coupling, smartphone control, and vehicle jumpstart — in one aerodynamic unit.</p>
+  </div>
+
+  <img class="btm-hero-img" src="images/btm_01_side.png" alt="Beijing Transit Module" onclick="openLightbox('images/btm_01_side.png')">
+
+  <div class="btm-features">
+    <div class="btm-feat" onclick="openLightbox('images/btm_03_open_lid.png')">
+      <img src="images/btm_03_open_lid.png" alt="Solar Power Bay">
+      <div class="info">
+        <h4>Solar Power Bay</h4>
+        <p>Integrated solar panels in the lid. Off-grid power generation with vehicle jumpstart capability.</p>
+      </div>
+    </div>
+    <div class="btm-feat" onclick="openLightbox('images/btm_safari_jumpstart_user.png')">
+      <img src="images/btm_safari_jumpstart_user.png" alt="Safari Jumpstart">
+      <div class="info">
+        <h4>Vehicle Jumpstart</h4>
+        <p>Emergency power delivery to jumpstart your BAIC vehicle anywhere — even in the African bush.</p>
+      </div>
+    </div>
+    <div class="btm-feat" onclick="openLightbox('images/btm_05_smartlock.png')">
+      <img src="images/btm_05_smartlock.png" alt="Biometric Lock">
+      <div class="info">
+        <h4>Biometric Fingerprint Lock</h4>
+        <p>Military-grade fingerprint sensor. No keys needed. Your fingerprint is the key.</p>
+      </div>
+    </div>
+    <div class="btm-feat" onclick="openLightbox('images/btm_04_security.png')">
+      <img src="images/btm_04_security.png" alt="CCTV Security">
+      <div class="info">
+        <h4>CCTV Alarm System</h4>
+        <p>Motion-activated cameras with night vision. Real-time alerts to your smartphone.</p>
+      </div>
+    </div>
+    <div class="btm-feat" onclick="openLightbox('images/btm_08_app_unlock.png')">
+      <img src="images/btm_08_app_unlock.png" alt="App Control">
+      <div class="info">
+        <h4>Smartphone App Control</h4>
+        <p>Lock, unlock, monitor, and control every function from the iQunube mobile app.</p>
+      </div>
+    </div>
+    <div class="btm-feat" onclick="openLightbox('images/btm_06_campfire.png')">
+      <img src="images/btm_06_campfire.png" alt="Campfire Night">
+      <div class="info">
+        <h4>Off-Grid Adventure</h4>
+        <p>Power your campsite, charge devices, and illuminate your basecamp — completely off the grid.</p>
+      </div>
+    </div>
+    <div class="btm-feat" onclick="openLightbox('images/btm_09_coastal.png')">
+      <img src="images/btm_09_coastal.png" alt="Coastal Drive">
+      <div class="info">
+        <h4>Aerodynamic Towing</h4>
+        <p>Teardrop profile for minimal drag. Designed for highway cruising and coastal adventures.</p>
+      </div>
+    </div>
+    <div class="btm-feat" onclick="openLightbox('images/btm_10_safari.png')">
+      <img src="images/btm_10_safari.png" alt="Safari">
+      <div class="info">
+        <h4>Safari Ready</h4>
+        <p>Built for the African terrain. Dust-sealed, shock-resistant, and adventure-proven.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="brand">iQunube × BAIC</div>
+  <p>iQunube (PTY) LTD — 100% Black-Owned<br>An iNAMBA NATION Company<br>Gqeberha, South Africa</p>
+  <p style="margin-top: 16px; color: var(--grey-dim);">Confidential — Subject to NDA &copy; 2026 iQunube (PTY) LTD. All rights reserved.</p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">&times;</span>
+  <img id="lightboxImg" src="" alt="Enlarged view">
+</div>
+
+
+<script src="script.js"></script>
+
+<!-- AUDIO -->
+<audio id="bgMusic" autoplay loop>
+  <source src="audio/atlasaudio-ambient-cinematic-510518.mp3" type="audio/mpeg">
+</audio>
+
+
+
+</body>
+</html>
