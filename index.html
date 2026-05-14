@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>iQunube — Coming Soon</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  min-height:100vh;
+  font-family:'Georgia','Times New Roman',serif;
+
+  background:url("images/COMING SOON BG.png") no-repeat center center/cover;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Dark overlay */
+body::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  z-index:1;
+}
+
+/* Content */
+.container{
+  position:relative;
+  z-index:2;
+  text-align:center;
+}
+
+/* Logo */
+.logo{
+  width:90vw;
+  max-width:500px;
+
+  opacity:0;
+
+  animation:
+    fadeIn 2s ease forwards,
+    float 4s ease-in-out infinite 2s;
+}
+
+/* Fade animation */
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* Floating effect */
+@keyframes float{
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-12px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <img src="images/COMING SOON.png" class="logo">
+</div>
+
+<!-- AUDIO -->
+<audio id="bgMusic" autoplay loop>
+  <source src="audio/atlasaudio-ambient-cinematic-510518.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("bgMusic");
+
+music.volume = 0.15;
+
+/* Try autoplay immediately */
+music.play().catch(() => {
+
+  /* If browser blocks autoplay,
+     play after first interaction */
+
+  document.body.addEventListener("click", () => {
+    music.play();
+  }, { once:true });
+
+});
+</script>
+
+</body>
+</html>
